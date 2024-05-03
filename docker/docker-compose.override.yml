@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  ml_mgie:
+    entrypoint: ["bash", "-c", "python app.py"]

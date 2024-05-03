@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  ml_mgie:
+    container_name: ml_mgie
+    image: maximofn/ml_mgie:1.0.1
+    build: .
+    runtime: nvidia
+    network_mode: "host"
+    volumes:
+      - ./hub:/root/.cache/huggingface/hub
+    tty: true
+    stdin_open: true
